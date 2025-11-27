@@ -18,6 +18,24 @@ jobs:
       - name: "Step 2"
         run: echo "hi!"
 
+  quality_check:
+    name: "Quality Check"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Get repo"
+        uses: actions/checkout@v6
+        
+        
+      - name: "Install Python"
+        uses: actions/setup-python@v6
+        
+      - name: "Install libraries"
+        run: pip install -r requirements.txt
+
+      - name: "Run tests"
+        run: pytest
+      
+
 
 
 # {
