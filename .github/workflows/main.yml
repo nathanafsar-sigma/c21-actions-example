@@ -1,0 +1,26 @@
+# When it happens
+on:
+  push:
+    branches:
+      - main
+      
+  workflow_dispatch:
+
+  
+# what it does
+jobs:
+  example:
+    name: "Example job"
+    runs-on: "ubuntu-latest"
+    steps: 
+      - name: "Step 1"
+        run: echo "hi!"
+      - name: "Step 1"
+        run: echo "hi!"
+
+
+
+# {
+#   key: 1,
+#   key2: 5
+# }
